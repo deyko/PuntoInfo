@@ -1,0 +1,142 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:llegarytopar"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="llegarytopar.Mainicecream"
+        mc:Ignorable="d"
+     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+     xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+     xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Mainicecream" Height="1006" Width="1280" Background="White" MouseLeftButtonUp="Window_MouseLeftButtonUp">
+    <Viewbox Stretch="Fill">
+
+        <Grid x:Name="Global" Height="506" Width="826">
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/fondos/fondo4.jpg"/>
+            </Grid.Background>
+            <Image x:Name="Logodecristorey" Source="/Resources/Principal/Banner/v.png" HorizontalAlignment="Left" Height="64" Margin="37,10,0,0" VerticalAlignment="Top" Width="58"/>
+
+
+            <Controls:Tile x:Name="Salir"  Title="" RenderTransformOrigin="1,1" FontSize="20"  Background="{x:Null}" FontFamily="Microsoft JhengHei UI Light" FontWeight="Bold" CountFontSize="24" TitleFontSize="19" Margin="762,2,3,453" Height="Auto" Width="Auto" Click="Salir_Click">
+                <Image Source="/Resources/Principal/Logos/off.png" Height="41" Width="60"/>
+            </Controls:Tile>
+            <Grid x:Name="Cabecera" Margin="131,10,131,300">
+                <Controls:FlipView x:Name="flip"
+                Foreground="{DynamicResource WhiteBrush}"
+                SelectionChanged="FlipView_SelectionChanged" Margin="10,10,10,4">
+                    <Grid Background="#2E8DEF">
+                        <Image Source="Resources/Principal/Banner/tia.jpg" Stretch="Fill"/>
+                    </Grid>
+                    <Grid Background="#00A600">
+                        <Image Source="Resources/Principal/Banner/banner2.jpg"  Stretch="Fill"/>
+                    </Grid>
+                    <Grid Background="#BF1E4B">
+                        <Image Source="Resources/Principal/Banner/cristo.png" Stretch="Fill"/>
+                    </Grid>
+                </Controls:FlipView>
+
+            </Grid>
+            <!---->
+            <Grid x:Name="Botones" Margin="0,211,0,0">
+                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="534" FontFamily="Microsoft JhengHei UI Light" FontStretch="Condensed" RenderTransformOrigin="0.541,0.5" TextAlignment="Center" Canvas.Left="213" Canvas.Top="97" FontSize="20" Text="Punto de información" Margin="134,10,0,0"/>
+                <Controls:Tile  Title="Precios Matriculación" RenderTransformOrigin="1,1" FontSize="20" Margin="331,63,250,125" Width="Auto" Height="Auto" FontFamily="Microsoft JhengHei UI Light" FontWeight="Bold" CountFontSize="24" TitleFontSize="19" Background="#FFEAD92E">
+                    <Image Source="/Resources/Principal/Logos/pago.png" Width="122" Height="75"/>
+           </Controls:Tile>
+               
+
+                <Controls:Tile  Title="Matriculas" RenderTransformOrigin="1,1" FontSize="20" Margin="165,175,323,48" Width="Auto" Height="Auto" Background="#CC74C95B" FontFamily="Microsoft JhengHei UI Light" FontWeight="Bold" CountFontSize="24" TitleFontSize="19" Click="Tile_Click_1">
+                    <Image Source="/Resources/Principal/Logos/matriculas.png" Width="122" Height="75"/>
+           </Controls:Tile>
+
+                <Controls:Tile  Title="Profesorado" RenderTransformOrigin="1,1" FontSize="20" Margin="26,63,666,48" Width="Auto" Height="Auto" Background="#CC00A0F0" Click="Tile_Click" FontFamily="Microsoft JhengHei UI Light" FontWeight="Bold" CountFontSize="24" TitleFontSize="19">
+                    <Image Source="/Resources/Principal/Logos/profe.png" Width="122" Height="75"/>
+           </Controls:Tile>
+
+                <Controls:Tile  Title="Autobuses" RenderTransformOrigin="1,1" FontSize="20" Margin="165,63,500,125" Width="Auto" Height="Auto" FontFamily="Microsoft JhengHei UI Light" FontWeight="Bold" CountFontSize="24" TitleFontSize="19" Click="Tile_Click_2">
+                    <Controls:Tile.Background>
+                        <SolidColorBrush Color="#CCE21B1B" Opacity="0.9"/>
+                    </Controls:Tile.Background>
+                    <Image Source="/Resources/Principal/bus.png" Width="122" Height="75"/>
+           </Controls:Tile>
+
+                <Controls:Tile  Title="Otra Información" RenderTransformOrigin="1,1" FontSize="20" Margin="581,63,28,125" Width="Auto" Height="Auto" Background="#CCD09BE4" FontFamily="Microsoft JhengHei UI Light" FontWeight="Bold" CountFontSize="24" TitleFontSize="19" Click="Tile_Click_4">
+                    <Image Source="/Resources/Principal/Logos/matriculas2.png" Width="122" Height="75"/>
+           </Controls:Tile>
+                
+               
+                <Controls:Tile x:Name="becas"  Title="Becas" RenderTransformOrigin="1,1" FontSize="20" Margin="508,175,28,48" Width="Auto" Height="Auto" FontFamily="Microsoft JhengHei UI Light" FontWeight="Bold" CountFontSize="24" TitleFontSize="19" Background="#FF323125" Click="becas_Click">
+                    <Image Source="Resources/Principal/Logos/cerdo.png" Width="148" Height="85"/>
+                </Controls:Tile>
+                <Controls:Tile x:Name="dudamascota" Margin="734,-21,10,203" Height="Auto" Width="Auto" Background="{x:Null}" Click="dudamascota_Click">
+                     <Image Source="/Resources/Mascota/help.png" Height="121" Width="75" Name="imagenmint"></Image>
+                </Controls:Tile>
+            </Grid>
+            <!--Fly de profesores-->
+            <Grid x:Name="FlyProfesor" Margin="380,0,0,-4">
+                <Controls:Flyout x:Name="profesopciones" Position="Right" Width="447" Margin="0,0,-1,-1" Foreground="White" d:IsHidden="True" >
+                    <Controls:Flyout.Background>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.DesktopColorKey}}" Opacity="0.8"/>
+                    </Controls:Flyout.Background>
+                    <Controls:Flyout.Header>
+                        <TextBlock x:Name="texto" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="335" FontFamily="Microsoft JhengHei UI Light" FontStretch="Condensed" RenderTransformOrigin="0.541,0.5" TextAlignment="Center" FontSize="24"><Run Text="¡Seleciona un Grupo!"/></TextBlock>
+                    </Controls:Flyout.Header>
+                    <!--Grid de botones dentro del Fy-->
+                    <Canvas>
+                        <Controls:Flyout x:Name="menusito" Position="Right" Width="401" Foreground="White" Height="398" Canvas.Left="20" Background="{x:Null}" CloseButtonVisibility="Hidden" TitleVisibility="Hidden" >
+                            <Canvas>
+                                <Controls:Tile x:Name="Admin" Title="Administración" Canvas.Left="34" Margin="0" Height="148" Width="163" Canvas.Top="30" HorizontalTitleAlignment="Center" VerticalTitleAlignment="Bottom" FontFamily="Microsoft PhagsPa" FontSize="22" TitleFontSize="19" ClickMode="Press" Background="{x:Null}" Click="Admin_Click">
+                                    <Image Source="Resources/Principal/logosprofe/Bullets-02-WF.png" Height="70" Width="137"/>
+                                </Controls:Tile>
+                                <Controls:Tile x:Name="bat" Title="Bachillerato" Canvas.Left="222" Margin="0" Height="148" Width="163" Canvas.Top="30" HorizontalTitleAlignment="Center" VerticalTitleAlignment="Bottom" FontFamily="Microsoft PhagsPa" FontSize="22" TitleFontSize="19" ClickMode="Press" Background="{x:Null}" Click="bat_Click">
+                                    <Image Source="Resources/Principal/logosprofe/bat.png" Height="70" Width="137"/>
+                                </Controls:Tile>
+                                <Controls:Tile x:Name="Eso" Title="GS. Infatil" Canvas.Left="34" Margin="0" Height="148" Width="163" Canvas.Top="198" HorizontalTitleAlignment="Center" VerticalTitleAlignment="Bottom" FontFamily="Microsoft PhagsPa" FontSize="22" TitleFontSize="19" ClickMode="Press" Background="{x:Null}" Click="Eso_Click">
+                                    <Image Source="Resources/Principal/logosprofe/eso.png" Height="70" Width="137"/>
+                                </Controls:Tile>
+                                <Controls:Tile x:Name="cf" Title="GS. Informática" Canvas.Left="222" Margin="0" Height="148" Width="163" Canvas.Top="198" HorizontalTitleAlignment="Center" VerticalTitleAlignment="Bottom" FontFamily="Microsoft PhagsPa" FontSize="22" TitleFontSize="19" ClickMode="Press" Background="{x:Null}" Click="cf_Click">
+                                    <Image Source="Resources/Principal/logosprofe/cf.png" Height="70" Width="137"/>
+                                </Controls:Tile>
+                            </Canvas>
+                        </Controls:Flyout>
+
+                    </Canvas>
+                    <!--Fin de boton 1-->
+
+                </Controls:Flyout>
+            </Grid>
+            <Grid x:Name="Grid_Mascota" Margin="0,297,0,0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="32*"/>
+                    <ColumnDefinition Width="27*"/>
+                    <ColumnDefinition Width="0*"/>
+                </Grid.ColumnDefinitions>
+                <Controls:Flyout  x:Name="flymascota" Height="211" Margin="0,-21,0,0" BorderBrush="White" Position="Bottom" TitleVisibility="Hidden" ContextMenuOpening="flymascota_ContextMenuOpening" MouseLeftButtonUp="flymascota_MouseLeftButtonUp" CloseButtonVisibility="Hidden" Grid.ColumnSpan="2" d:IsHidden="True">
+
+
+                    <Controls:Flyout.Background>
+                        <SolidColorBrush Color="#FF8FF0FF" Opacity="0.85"/>
+
+                    </Controls:Flyout.Background>
+
+                    <Canvas>
+                        <Image Source="/Resources/Mascota/mintfeliz.png" Height="187" VerticalAlignment="Top" Width="123" Canvas.Left="35" Canvas.Top="3"/>
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="¡RWAR!" VerticalAlignment="Top" FontSize="22" Width="99" TextDecorations="{x:Null}" FontFamily="Microsoft YaHei" FontWeight="Bold" FontStyle="Italic" Canvas.Left="220" Canvas.Top="3"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="505" FontFamily="Microsoft YaHei UI Light" FontStretch="Condensed" RenderTransformOrigin="0.541,0.5" TextAlignment="Center" Canvas.Left="209" Canvas.Top="37" FontWeight="Bold" FontSize="14"><Run Text="Hola, soy Mint"/><Run Text="! ¿"/><Run Text="¡"/><Run Text="Alguna sugerencia para nuestra aplicación"/><Run Text="!"/><Run Text="?"/></TextBlock>
+                        <TextBox Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Nos encantará recibir nuevas ideas!"  Canvas.Left="298" Canvas.Top="70" Width="300" Height="54"  />
+                        <Controls:Tile Background="{x:Null}" Canvas.Left="397" Margin="0" Canvas.Top="135" Height="66" Width="93" Click="Tile_Click_3">
+                            <Image Source="/Resources/Mascota/bone.png" Width="108" Height="56"/>
+
+
+                        </Controls:Tile>
+                    </Canvas>
+
+                </Controls:Flyout>
+
+            </Grid>
+
+        </Grid>
+    </Viewbox>
+</Window>

@@ -1,0 +1,7 @@
+C:\Users\deyko\source\repos\llegarytopar\Matriculas\obj\Debug\Matriculas.csprojResolveAssemblyReference.cache
+C:\Users\deyko\source\repos\llegarytopar\Matriculas\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\deyko\source\repos\llegarytopar\Matriculas\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\deyko\source\repos\llegarytopar\Matriculas\obj\Debug\Matriculas.csproj.ResolveComReference.cache
+C:\Users\deyko\source\repos\llegarytopar\Matriculas\obj\Debug\Matriculas.Properties.Resources.resources
+C:\Users\deyko\source\repos\llegarytopar\Matriculas\obj\Debug\Matriculas.csproj.GenerateResource.cache
+C:\Users\deyko\source\repos\llegarytopar\Matriculas\obj\Debug\Matriculas.csproj.CoreCompileInputs.cache
